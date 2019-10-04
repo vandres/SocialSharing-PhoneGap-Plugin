@@ -164,8 +164,9 @@ var options = {
   subject: 'the subject', // fi. for email
   files: ['', ''], // an array of filenames either locally or remotely
   url: 'https://www.website.com/foo/#bar?a=b',
-  chooserTitle: 'Pick an app' // Android only, you can override the default share sheet title,
-  appPackageName: 'com.apple.social.facebook' // Android only, you can provide id of the App you want to share with
+  chooserTitle: 'Pick an app', // Android only, you can override the default share sheet title
+  appPackageName: 'com.apple.social.facebook', // Android only, you can provide id of the App you want to share with
+  iPadCoordinates: '0,0,0,0' //IOS only iPadCoordinates for where the popover should be point.  Format with x,y,width,height
 };
 
 var onSuccess = function(result) {
@@ -468,6 +469,9 @@ Sharing an image (only images from the internet are supported). If you pass more
 ```
 
 ## 7. Share-popover on iPad
+
+> This no longer works since plugin version 5.5.0, see [this issue](https://github.com/EddyVerbruggen/SocialSharing-PhoneGap-Plugin/issues/1052).
+
 Carlos Sola-Llonch, a user of this plugin, pointed me at an [iOS document](https://developer.apple.com/library/ios/documentation/uikit/reference/UIActivityViewController_Class/Reference/Reference.html)
 stating "On iPad, you must present the view controller in a popover. On iPhone and iPod touch, you must present it modally."
 
